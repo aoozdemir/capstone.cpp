@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.11.3)
 
-add_definitions(-std=c++17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -pthread")
 
-set(CXX_FLAGS "-Wall")
-set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
+file(GLOB project_SRCS src/*.cpp) #src/*.h
 
 project(tileminer)
 
-add_executable(tileminer src/main.cpp)
+# Add project executable
+add_executable(tileminer ${project_SRCS})

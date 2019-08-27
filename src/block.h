@@ -4,7 +4,6 @@
 #include <mutex>
 #include <string>
 #include <vector>
-#include "tile.h"
 
 class Block {
    public:
@@ -23,7 +22,7 @@ class Block {
 
    protected:
     int _id;
-    std::shared_ptr<Tile> _placedOn;
+    // std::shared_ptr<Tile> _placedOn;
     bool _status;
     double _storage;
     double _rate;
