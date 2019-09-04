@@ -38,6 +38,7 @@ class Tile {
     int getStatus() { return _isOccupied; };
     std::string getType() { return TileStr[_type]; };
     void placeBlock(Block *block);
+    Block *getBlock() { return _block; }
     // std::shared_ptr<Tile> get_shared_this() { return shared_from_this(); }
 
    protected:

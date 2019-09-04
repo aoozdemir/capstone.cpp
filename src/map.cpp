@@ -4,6 +4,9 @@
 #include <random>
 #include "tile.h"
 
+class Tile;
+class Block;
+
 Map::Map() {
     _seed = 1;
     _size = 1;
@@ -12,6 +15,21 @@ Map::Map() {
 Map::Map(int size) {
     _seed = 1;
     _size = size;
+}
+
+void Map::simulate() {
+    // launch drive function in a thread
+    for (auto &tile : this->getTiles()) {
+        Block *block = tile->getBlock();
+        // futures.emplace_back(std::async(std::launch::any, &Block::mine, block));
+        threads.emplace_back(std::thread(&Block::mine, block));
+    }
+
+    std::for_each(threads.begin(), threads.end(), [](std::thread &t) {
+        t.join();
+    });
+    // for (const std::future<void> &ftr : futures)
+    //     ftr.wait();
 }
 
 void Map::createTiles() {

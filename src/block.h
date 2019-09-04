@@ -3,7 +3,6 @@
 
 #include <mutex>
 #include <string>
-#include <thread>
 #include <vector>
 #include "tile.h"
 
@@ -16,9 +15,9 @@ class Block {
     Block(int id);
 
     // getter and setter
-    int getID() { return _id; }
-    int getOutput() { return _output_per_second; }
-    int getStored() { return _storage; }
+    double getID() { return _id; }
+    double getOutput() { return _output_per_second; }
+    double getStored() { return _storage; }
     void simulate();
     void setPlacedOn(std::shared_ptr<Tile> tile) { _placedOn = tile; };
     void addStorage(double input, double stored) { _storage = stored + input; };
@@ -33,8 +32,6 @@ class Block {
     double _storage;
     double _rate;
     double _output_per_second;
-    std::vector<std::thread> threads;
-    static std::mutex _mtx;
 };
 
 #endif

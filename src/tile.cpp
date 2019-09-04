@@ -24,6 +24,4 @@ void Tile::placeBlock(Block *block) {
     _block = block;
     std::shared_ptr shared_tile = std::make_shared<Tile>(*this);
     block->setPlacedOn(shared_tile);
-    block->mine();
-    std::cout << "Simulating " << block->getID() << "\n";
 }
