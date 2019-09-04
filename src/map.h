@@ -15,7 +15,7 @@ class Map {
     // getter and setter
     int getSize() { return _size; }
     void createTiles();
-    std::vector<Tile> getTiles() { return tiles; }
+    std::vector<std::shared_ptr<Tile>> getTiles() { return tiles; }
     int getTileCount() { return tiles.size(); };
     // int getID() { return _id; }
     // void setPosition(double x, double y);
@@ -34,7 +34,7 @@ class Map {
     // static std::mutex _mtx;           // mutex shared by all traffic objects for protecting cout
 
    private:
-    std::vector<Tile> tiles;
+    std::vector<std::shared_ptr<Tile>> tiles;
 
     // static int _idCnt; // global variable for counting object ids
 };

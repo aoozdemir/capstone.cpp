@@ -98,7 +98,11 @@
     "numeric": "cpp",
     "memory_resource": "cpp",
     "cinttypes": "cpp",
-    "bit": "cpp"
+    "bit": "cpp",
+    "__tree": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "unordered_set": "cpp"
   },
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
 }
