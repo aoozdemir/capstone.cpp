@@ -28,8 +28,10 @@ int main() {
                   << tile->getCapacity()
                   << "\n";
 
-        Block *block = new Block(tile->getId());
-        tile->placeBlock(block);
+        if (tile->getType() != "Grass") {
+            Block *block = new Block(tile->getId());
+            tile->placeBlock(block);
+        }
     }
 
     _9map->simulate();

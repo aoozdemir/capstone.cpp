@@ -16,7 +16,12 @@ Tile::Tile(int id, int posX, int posY, bool isOccupied) {
     _posY = posY;
     _isOccupied = isOccupied;
     _type = static_cast<TileType>(rand() % 4);
-    _capacity = rand() % 1000 + 100;
+
+    if (_type == TileType::grass) {
+        _capacity = 0;
+    } else {
+        _capacity = rand() % 1000 + 100;
+    }
 }
 
 void Tile::placeBlock(Block *block) {
