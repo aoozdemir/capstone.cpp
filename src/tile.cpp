@@ -3,8 +3,6 @@
 #include <random>
 #include "block.h"
 #include "map.h"
-// #include "Intersection.h"
-// #include "Street.h"
 
 Tile::Tile() {
     _id = 1;

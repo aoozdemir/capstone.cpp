@@ -39,7 +39,6 @@ class Tile {
     std::string getType() { return TileStr[_type]; };
     void placeBlock(Block *block);
     Block *getBlock() { return _block; }
-    // std::shared_ptr<Tile> get_shared_this() { return shared_from_this(); }
 
    protected:
     int _id;
@@ -51,9 +50,6 @@ class Tile {
     double _capacity;
     bool _isOccupied;
     Block *_block;
-    // std::vector<std::thread> threads;
-    // std::shared_ptr<Tile> _tile;
-    // static std::mutex _mtx;
 };
 
 #endif

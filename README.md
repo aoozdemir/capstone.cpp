@@ -1,10 +1,16 @@
-# CPPND: Capstone Hello World Repo
+# CPPND: Capstone TileMiner
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+This is the capstone project for Udacity CPP ND. TileMiner is a super basic mining simulation that uses threads to mine a tile map that's 9x9 big. Each square is one tile and is an available spot for one block. Blocks are basically the miners. Tiles can be `grass`, `iron`, `copper`, `stone`, or `coal`. Grass tiles are not available for placing a block and has the capacity of 0.
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+Each time you run the `./tileminer`, program will generate a random set of 9x9 tiles with random capacity, place a block to available spots and start mining the tiles. Mining rate is also a random number that changes each run. In the output, you'll see something similar to this line which indicated the current operation on tiles.
 
-In this project, you can build your own C++ application starting with this repo, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+```
+Mining... block id: 5 | tile id: 5		cap: 458		out: 61		stored: 610
+```
+
+That's all so far. I do realise the interface for this isn't the best and the general status can be improved. With the limited time I have this September, this is the best I can do at the moment.
+
+All the best.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -23,4 +29,4 @@ In this project, you can build your own C++ application starting with this repo,
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./tileminer`.

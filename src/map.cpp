@@ -18,9 +18,9 @@ Map::Map(int size) {
 }
 
 void Map::simulate() {
-    // launch drive function in a thread
     for (auto &tile : this->getTiles()) {
         if (tile->getType() == "Grass") continue;
+
         std::cout << "Setting a miner on tile " << tile->getType() << "\t(" << tile->getId() << ")" << std::endl;
         Block *block = tile->getBlock();
         // futures.emplace_back(std::async(std::launch::any, &Block::mine, block));

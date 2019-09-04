@@ -46,9 +46,10 @@ void Block::mine() {
             this->addStorage(cap, stored);
             this->_placedOn->removeCapacity(cap, cap);
 
-            PrintThread{} << "==================================" << std::endl;
+            PrintThread{} << "\n==================================" << std::endl;
             PrintThread{} << "block id: " << this->getID() << " | tile id: " << this->_placedOn->getId() << " is dried." << std::endl;
-            PrintThread{} << "==================================" << std::endl;
+            PrintThread{} << "==================================\n"
+                          << std::endl;
 
             break;
         }

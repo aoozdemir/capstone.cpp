@@ -10,11 +10,9 @@ class Tile;
 
 class Block {
    public:
-    // constructor / desctructor
     Block();
     Block(int id);
 
-    // getter and setter
     double getID() { return _id; }
     double getOutput() { return _output_per_second; }
     double getStored() { return _storage; }
@@ -22,8 +20,6 @@ class Block {
     void setPlacedOn(std::shared_ptr<Tile> tile) { _placedOn = tile; };
     void addStorage(double input, double stored) { _storage = stored + input; };
     void mine();
-
-    // std::shared_ptr<Block> get_shared_this() { return shared_from_this(); }
 
    private:
     std::shared_ptr<Tile> _placedOn;
